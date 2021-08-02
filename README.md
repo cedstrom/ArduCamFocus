@@ -4,7 +4,7 @@ This plugin controls the focus on an ArduCam Motorized Focus Camera.  https://ww
 
 ![screenshot](extras/assets/img/plugins/ArduCamFocus/ControlScreenShot.png)
 
-It uses a custom `@ARDUCAMFOCUSSET FOCUS` command that can be incorporated within your slicer to automatically adjust focus while printing. 
+It uses a custom `@ARDUCAMFOCUSSET FOCUS` command that can be incorporated within your slicer to automatically adjust focus while printing.
 You can also send relative adjustments with `@ARDUCAMFOCUS 50` or `@ARDUCAMFOCUS -50`
 
 Example: `@ARDUCAMFOCUSSET 300` will set the focus to 300.
@@ -42,9 +42,17 @@ sudo raspi-config
 5. you should see, "The ARM I2C interface is enabled"
 6. select "Finish"
 
+You may also need to install the following packages:
+
+libilmbase-dev
+libopenexr-dev
+libgstreamer1.0-dev
+python-smbus
+i2c-tools
+libgtk-3-0
+
 After you reboot, the camera should become operational in OctoPrint.
-    
+
 ### Disclaimer
 
 Although I use this plugin and it works for me without issues, I take no resposiblity for any damage caused by using this plugin. Your camera version, i2c address, or system configuration may be different from mine.  Please make sure to do your reseach and understand the dangers and please be careful.
-
